@@ -1,0 +1,185 @@
+.text-sm {
+  font-size: 1.2rem;
+}
+
+.text-m {
+  font-size: 1.6rem;
+}
+
+.text-l {
+  font-size: 2.4rem;
+}
+
+.text-xl {
+  font-size: 3.2rem;
+}
+
+.text-2xl {
+  font-size: 4rem;
+}
+
+.h-9 {
+  height: 9.6rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-sm {
+  gap: 0.2rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+}
+
+.grid .stage-grid:not(:last-child) {
+  border-right: 1px solid #6b3003;
+}
+
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.vw-80 {
+  max-width: 80vw;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+.mt-8 {
+  margin-top: 8rem;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.py-3 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.ml-8 {
+  margin-left: 8rem;
+}
+
+.ml-10p {
+  margin-left: 10%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 2px 2px 0 0;
+  table-layout: fixed;
+}
+
+.table thead tr {
+  background-color: #6b3003;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  padding: 1.2rem 1.5rem;
+}
+
+.table tbody tr {
+  /* border-bottom: 1px solid #6b3003; */
+  color: white;
+}
+
+.table tbody tr:nth-of-type(even) {
+  border-top: #6b3003;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #6b3003;
+}
+
+.table-row {
+  height: 5rem;
+}
+
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.overflow-scroll {
+  overflow-y: scroll;
+}

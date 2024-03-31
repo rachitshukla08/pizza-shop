@@ -1,0 +1,27 @@
+.color-primary {
+  background-color: #2e7c2f;
+}
+.color-primary {
+  color: #6b3003;
+}
+
+.text-color-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.text-color-black {
+  color: #000;
+  opacity: 1;
+}
+
+.bg-red {
+  background-color: maroon;
+}
