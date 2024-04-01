@@ -16,6 +16,10 @@ export const DisplayRow = ({ order, stages, handleCancelOrder }) => {
     handleCancelOrder(order.id);
   };
 
+  const getDuration = () => {
+    return Math.floor((order.endTime - order.startTime) / 1000);
+  };
+
   return (
     <tr className="table-row">
       <td>{order.id}</td>
@@ -26,7 +30,9 @@ export const DisplayRow = ({ order, stages, handleCancelOrder }) => {
             {Math.floor(timeElapsed / 60)} min {timeElapsed % 60} s
           </>
         ) : (
-          <></>
+          <>
+            {Math.floor(getDuration() / 60)} min {getDuration() % 60} s
+          </>
         )}
       </td>
       <td>

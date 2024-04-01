@@ -1,6 +1,41 @@
 # PIZZA SHOP APPLICATION
 
-This application simulates the behavior of a pizza restaurant, allowing users to place orders, track their progress through different stages, and shop owners to manage the overall stages.
+This application simulates the behavior of a pizza restaurant, allowing users to place orders, track their progress through different stages, and to manage the overall stages.
+
+## Features
+
+### Order Placement
+
+Users can place pizza orders through a form with several different variations of pizza.
+The pizza shop can handle a maximum of 10 concurrent orders at which the users will be presented with a warning in the form, still if they try to submit an order they will be restricted to do the same.
+
+### Order Tracking
+
+Each order progresses through different stages: Order Placed, Order in Making, Order Ready, and Order Picked.
+Orders are displayed in each stage sorted in order of their delay in each stage.
+Orders can be moved from one stage to the next by clicking on the next button.
+Users can track the time spent in each stage. Different pizzas have different making times according to their sizes.
+If at any stage the time exceeds the limit, the order will be highlighted in red.
+
+### Main Display
+
+Provides an overview of all orders in progress with total time spent and order ID, as well as the total number of orders delivered today.
+Users can cancel the order before the order is ready. The time stops once the order is picked up.
+Total number of orders delivered is also displayed.
+
+###
+
+## Technologies Used
+
+### React
+
+### Redux
+
+### HTML and CSS
+
+### JavaScript
+
+### GIT
 
 ## Available Scripts
 
@@ -28,13 +63,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.

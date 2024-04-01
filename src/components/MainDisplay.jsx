@@ -16,7 +16,7 @@ const MainDisplay = () => {
   };
 
   return (
-    <div className="m-auto vw-80 mt-8 text-sm">
+    <div className="m-auto vw-80 mt-10 text-sm">
       <div>
         <table className="table m-auto">
           <thead className="text-m">

@@ -15,7 +15,7 @@ const Stages = () => {
   };
 
   return (
-    <div className="vw-80 m-auto mt-5 text-color-white overflow-scroll">
+    <div className="vw-80 m-auto mt-10 text-color-white overflow-scroll">
       <div className="grid col-4 vh-80 ">
         {stages.map((stage, i) => {
           return (

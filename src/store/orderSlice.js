@@ -33,6 +33,11 @@ const orderSlice = createSlice({
           stageStartTime: Date.now(),
         };
         if (state.orderPlaced[orderIndex].stage === 3) {
+          state.orderPlaced[orderIndex] = {
+            ...order,
+            stage: order.stage + 1,
+            endTime: Date.now(),
+          };
           state.inProgressOrders--;
           state.ordersDelivered++;
         }

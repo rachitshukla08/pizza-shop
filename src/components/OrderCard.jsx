@@ -1,11 +1,33 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import {
+  MAX_TIME,
+  MAX_TIME_SMALL,
+  MAX_TIME_MEDIUM,
+  MAX_TIME_LARGE,
+} from "../data/pizzaInfo";
 
 const OrderCard = ({ order, handleNextStage }) => {
-  const MAX_TIME = 180;
-
   const handleClick = () => {
     handleNextStage(order.id);
+  };
+
+  const getOrderCardClass = (timeElapsed, order) => {
+    if (order.stage === 1) {
+      if (
+        (order.size === "small" && timeElapsed > MAX_TIME_SMALL) ||
+        (order.size === "medium" && timeElapsed > MAX_TIME_MEDIUM) ||
+        (order.size === "large" && timeElapsed > MAX_TIME_LARGE)
+      ) {
+        return "bg-red order-card";
+      }
+      return "order-card";
+    } else if (order.stage < 3) {
+      if (timeElapsed > MAX_TIME) {
+        return "bg-red order-card";
+      }
+    }
+    return "order-card";
   };
 
   const [timeElapsed, setTimeElapsed] = useState(0);
@@ -23,14 +45,9 @@ const OrderCard = ({ order, handleNextStage }) => {
 
   return (
     <div className="order-card-container mt-2">
-      <div
-        className={
-          timeElapsed > MAX_TIME && order.stage < 3
-            ? "bg-red order-card"
-            : "order-card"
-        }
-      >
+      <div className={getOrderCardClass(timeElapsed, order)}>
         <p className="text-m">Order: {order.id}</p>
+        <p className="text-xsm mt-1"> {order.size}</p>
         {order.stage < 3 ? (
           <div>
             <p className="mt-2 text-sm">

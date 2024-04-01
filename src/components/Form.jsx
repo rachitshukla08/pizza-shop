@@ -5,6 +5,7 @@ import {
   availableBases,
   availableSizes,
   availableTypes,
+  MAX_ORDERS,
 } from "../data/pizzaInfo";
 import { useSelector, useDispatch } from "react-redux";
 import { addOrder } from "../store/orderSlice";
@@ -17,11 +18,10 @@ const Form = () => {
     stage: 0,
     startTime: 0,
     stageStartTime: 0,
+    endTime: 0,
   });
   const dispatch = useDispatch();
 
-  const orderPlaced = useSelector((store) => store.order.orderPlaced);
-  const totalOrders = useSelector((store) => store.order.totalOrders);
   const inProgressOrders = useSelector((store) => store.order.inProgressOrders);
 
   const handleRadioButtonChange = (e) => {
@@ -31,7 +31,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inProgressOrders >= 10) {
+    if (inProgressOrders >= MAX_ORDERS) {
       alert("Not taking any orders for now");
       return;
     }
@@ -51,6 +51,13 @@ const Form = () => {
         form-container d-flex flex-col gap-2 text-sm text-color-black"
         onSubmit={handleSubmit}
       >
+        {inProgressOrders >= MAX_ORDERS ? (
+          <p className="text-color-red text-xsm">
+            &#9888; ORDER QUEUE IS FULL{" "}
+          </p>
+        ) : (
+          ""
+        )}
         <h1 className="text-l">Customise your pizza:</h1>
         <div className="d-flex flex-col gap-1">
           <p className="text-m">Pizza Type:</p>

@@ -48,3 +48,9 @@ export const availableBases = [
     text: "Thick",
   },
 ];
+
+export const MAX_ORDERS = 10;
+export const MAX_TIME = 180;
+export const MAX_TIME_SMALL = 180;
+export const MAX_TIME_MEDIUM = 240;
+export const MAX_TIME_LARGE = 300;
